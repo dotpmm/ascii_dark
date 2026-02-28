@@ -1,45 +1,108 @@
+
 # ASCII TXT → 4K PNG Renderer
 
-## Purpose
+<p align="center">
 
-Many online ASCII converters (e.g. asciiart.eu) offer PNG export.  
-However, dark-background ASCII art often suffers from:
+</p>
 
-- Washed-out contrast
-- Poor gamma handling
-- Inconsistent font spacing
-- Low effective resolution
+High-fidelity ASCII renderer that preserves dark backgrounds and produces true 4K PNG output.
 
-This tool fixes that.
+## Overview
 
-It takes a `.txt` ASCII file and renders a **true 4K PNG** with:
+We all love generating ascii art! But I noticed that most online ASCII converters like https://www.asciiart.eu/image-to-ascii fail to render true black backgrounds.
 
-- Solid black background
-- High-resolution scaling
-- Proper monospace font rendering
-- 300 DPI output
+They often suffer from 
 
-Designed for wallpapers, portfolio use, or high-quality exports.
+- Washed-out dark backgrounds  
+- Low effective resolution  
+- Lower DPI export quality
+- Inefficient image scaling
 
----
+This tool eliminates those issues.
 
-## How It Works
+It takes a `.txt` ASCII file and renders a properly scaled **true 4K PNG (3840px width)** with accurate monospace alignment and solid black background preservation.
 
-1. Reads ASCII text file
-2. Calculates maximum line width
-3. Dynamically scales font to hit target width (default 3840px)
-4. Renders text onto a black canvas
-5. Exports a 4K PNG
+## Features
 
----
+- True 4K output (3840px width)
+- Solid black background rendering
+- Accurate monospace font scaling
+- 300 DPI export
+- Automatic `.txt` and `.png` handling
+- Simple CLI
 
-## Requirements
+Designed for wallpapers, digital art, and high-quality showcase output.
 
-- Python 3.9+
-- Pillow
-- NumPy
+## Installation
 
-Install dependencies:
+Clone the repository:
 
 ```bash
-pip install pillow numpy
+git clone https://github.com/dotpmm/ascii_dark.git
+cd ascii_dark
+````
+
+Install dependencies (using `uv`):
+
+```bash
+uv sync
+```
+
+## Usage
+
+1. Visit [https://www.asciiart.eu/image-to-ascii](https://www.asciiart.eu/image-to-ascii)
+2. Generate ASCII art with your desired configuration
+3. Download the generated `ascii_art.txt`
+4. Move the `.txt` file into the project directory
+5. Run:
+
+```bash
+uv run main.py
+```
+
+6. Enter:
+
+   * ASCII file name (no need to type `.txt`)
+   * Output image name (no need to type `.png`)
+
+Type `quit` at any time to exit.
+
+---
+
+## Comparison
+
+### Website Export vs Local 4K Render
+
+<p align="center">
+  <img src="assets/website_output.png" width="45%">
+  &nbsp;&nbsp;
+  <img src="assets/local_render_4k.png" width="45%">
+</p>
+
+<p align="center">
+  <strong>Left:</strong> Website PNG Export  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <strong>Right:</strong> 4K Render (This Tool)
+</p>
+
+### Key Differences
+
+- True black background preservation
+- Higher effective resolution (3840px width)
+- Sharper character rendering
+- Proper DPI export (300 DPI)
+- No background washout
+
+---
+
+## Detailed Preview
+
+<p align="center">
+  <img src="assets/image.png" width="75%">
+</p>
+
+---
+
+## License
+
+MIT License
