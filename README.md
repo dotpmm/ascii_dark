@@ -67,22 +67,24 @@ uv run main.py
 
 Type `quit` at any time to exit.
 
----
 
 ## Comparison
 
 ### Website Export vs Local 4K Render
 
 <p align="center">
-  <img src="assets/website_output.png" width="45%">
-  &nbsp;&nbsp;
-  <img src="assets/local_render_4k.png" width="45%">
-</p>
-
-<p align="center">
-  <strong>Left:</strong> Website PNG Export  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <strong>Right:</strong> 4K Render (This Tool)
+  <table>
+    <tr>
+      <td align="center">
+        <img src="assets/website_output.png" width="100%"><br>
+        <strong>Website PNG Export</strong>
+      </td>
+      <td align="center">
+        <img src="assets/local_render_4k.png" width="100%"><br>
+        <strong>4K Render (This Tool)</strong>
+      </td>
+    </tr>
+  </table>
 </p>
 
 ### Key Differences
@@ -93,7 +95,6 @@ Type `quit` at any time to exit.
 - Proper DPI export (300 DPI)
 - No background washout
 
----
 
 ## Detailed Preview
 
@@ -101,7 +102,7 @@ Type `quit` at any time to exit.
   <img src="assets/image.png" width="75%">
 </p>
 
----
+
 
 ## License
 
