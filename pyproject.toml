@@ -1,0 +1,10 @@
+[project]
+name = "ascii.png"
+version = "0.1.0"
+description = "ASCII txt to 4k png generator"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.4.2",
+    "pillow>=12.1.1",
+]
